@@ -58,6 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // 2. Testimonial Pagination Dots
+  const dots = document.querySelectorAll('#testimonials button[aria-label^="Slide"]');
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      dots.forEach(d => {
+        d.classList.remove('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
+        d.classList.add('w-2', 'h-2', 'bg-white/40');
+      });
+      dot.classList.remove('w-2', 'h-2', 'bg-white/40');
+      dot.classList.add('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
+    });
+  });
+
   // Quick consultancy form submission feedback
   const quickForm = document.getElementById('quick-consultancy-form');
   if (quickForm) {
