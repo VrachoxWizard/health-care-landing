@@ -121,7 +121,136 @@
 
   <!-- MAIN CONTENT CONTAINER -->
   <main id="main-content" class="flex-grow">
-    <!-- Sections will be inserted here -->
+    
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative bg-gradient-to-r from-[#edf4f9] via-[#f1f6fa] to-[#e8f1f8] pt-12 sm:pt-16 pb-24 sm:pb-32 overflow-hidden border-b border-gray-100">
+      <div class="max-w-[1024px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between min-h-[420px] relative">
+        
+        <!-- Left Hero Content -->
+        <div class="w-full md:w-1/2 z-10 py-6">
+          <h1 class="text-3xl sm:text-4xl lg:text-[42px] font-bold text-brand-navy leading-[1.2] tracking-tight mb-4">
+            Start Caring for Your<br class="hidden sm:inline"> Health Today
+          </h1>
+          <p class="text-xs sm:text-sm text-[#6b7c93] leading-relaxed max-w-sm mb-6">
+            We're revolutionizing renewable energy across with efficient and impactful solar solutions.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="#appointment" class="bg-brand-cyan hover:bg-brand-cyan-hover text-white font-semibold text-xs px-6 py-2.5 rounded shadow-sm transition inline-block">
+              Find a Doctor
+            </a>
+            <a href="#appointment" class="text-brand-cyan hover:underline font-semibold text-xs flex items-center gap-1 transition">
+              Book an Appointment <span aria-hidden="true">&gt;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Doctor Image -->
+        <div class="w-full md:w-1/2 flex justify-end items-end relative md:absolute md:right-0 md:bottom-0 md:top-0 pointer-events-none">
+          <img 
+            src="./assets/images/hero-doctor.webp" 
+            alt="Physician in scrubs, surgical mask and cap" 
+            class="h-auto max-h-[460px] md:max-h-[500px] object-contain object-bottom pointer-events-auto"
+            loading="eager"
+            fetchpriority="high"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FLOATING QUICK ONLINE CONSULTANCY CARD -->
+    <section class="relative z-20 max-w-[1024px] mx-auto px-4 -mt-16 sm:-mt-20 mb-16">
+      <div class="bg-white rounded-lg shadow-floating border border-gray-100 p-6 sm:p-8">
+        <form id="quick-consultancy-form" method="POST" action="/consultancy" class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          
+          <!-- Left Column Headline -->
+          <div class="md:col-span-4">
+            <h2 class="text-lg sm:text-xl font-bold text-brand-navy leading-snug">
+              Quick Online<br>
+              Consultancy Only<br>
+              on <span class="text-brand-cyan">Few Minutes</span>
+            </h2>
+          </div>
+
+          <!-- Right Column Fields -->
+          <div class="md:col-span-8 flex flex-col gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              
+              <div>
+                <label for="consult-name" class="sr-only">Your Name</label>
+                <input 
+                  type="text" 
+                  id="consult-name" 
+                  name="name" 
+                  placeholder="Your Name*" 
+                  required 
+                  autocomplete="name"
+                  class="w-full bg-[#f8fafc] border border-gray-200 rounded px-3 py-2 text-xs text-brand-navy placeholder-[#94a3b8] focus:bg-white focus:outline-none focus:border-brand-cyan transition"
+                >
+              </div>
+
+              <div>
+                <label for="consult-email" class="sr-only">Your Email</label>
+                <input 
+                  type="email" 
+                  id="consult-email" 
+                  name="email" 
+                  placeholder="Your Email*" 
+                  required 
+                  autocomplete="email"
+                  class="w-full bg-[#f8fafc] border border-gray-200 rounded px-3 py-2 text-xs text-brand-navy placeholder-[#94a3b8] focus:bg-white focus:outline-none focus:border-brand-cyan transition"
+                >
+              </div>
+
+              <div class="relative">
+                <label for="consult-doctor" class="sr-only">Choose a Doctor</label>
+                <select 
+                  id="consult-doctor" 
+                  name="doctor"
+                  class="w-full appearance-none bg-[#f8fafc] border border-gray-200 rounded px-3 py-2 text-xs text-[#64748b] focus:bg-white focus:outline-none focus:border-brand-cyan transition cursor-pointer"
+                >
+                  <option value="">Choose a Doctor</option>
+                  <option value="dr-mira">Dr. Mira Levin (General Practitioner)</option>
+                  <option value="dr-abram">Dr. Abram Philips (Emergency Physician)</option>
+                  <option value="dr-ashlynn">Dr. Ashlynn Korsgaard (Cardiologist)</option>
+                  <option value="dr-cooper">Dr. Cooper Dias (Orthopedic Surgeon)</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </div>
+
+              <div class="relative">
+                <label for="consult-platform" class="sr-only">Choose a Platform</label>
+                <select 
+                  id="consult-platform" 
+                  name="platform"
+                  class="w-full appearance-none bg-[#f8fafc] border border-gray-200 rounded px-3 py-2 text-xs text-[#64748b] focus:bg-white focus:outline-none focus:border-brand-cyan transition cursor-pointer"
+                >
+                  <option value="">Choose a Platform</option>
+                  <option value="zoom">Zoom Video Call</option>
+                  <option value="google-meet">Google Meet</option>
+                  <option value="phone">Direct Phone Call</option>
+                  <option value="whatsapp">WhatsApp Video</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-gray-400">
+                  <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </div>
+              </div>
+
+            </div>
+
+            <button 
+              type="submit" 
+              class="w-full bg-brand-cyan hover:bg-brand-cyan-hover text-white font-semibold text-xs py-2.5 rounded shadow-sm transition"
+            >
+              Get Online Consultancy
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </section>
   </main>
 
   <script type="module" src="./src/main.js"></script>
