@@ -544,6 +544,206 @@
       </div>
     </section>
 
+    <!-- 10. ALL KINDS OF LAB TESTS SECTION -->
+    <section id="lab-tests" class="py-16 sm:py-20 bg-white">
+      <div class="max-w-[1024px] mx-auto px-4">
+        
+        <!-- Header -->
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-brand-gold text-xs font-bold tracking-wider uppercase mb-1 block">OUR SERVICE</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-2.5">All Kinds Of Lab Tests</h2>
+          <p class="text-xs text-[#5d7186] leading-relaxed">
+            We have introduced the principle of family medicine, which means that the family practitioner will handle the majority of medical requests, with a specialists involved only if necessary.
+          </p>
+        </div>
+
+        <!-- Interactive Tabs Navigation -->
+        <div class="flex items-center justify-center gap-6 sm:gap-10 border-b border-gray-200 mb-8 text-xs font-semibold" role="tablist" aria-label="Lab test categories">
+          <button 
+            type="button" 
+            role="tab" 
+            id="tab-chemical" 
+            aria-selected="true" 
+            aria-controls="panel-chemical" 
+            tabindex="0"
+            class="lab-tab-btn pb-3 text-brand-navy border-b-2 border-brand-gold transition cursor-pointer"
+          >
+            Chemical Research
+          </button>
+          <button 
+            type="button" 
+            role="tab" 
+            id="tab-vaccine" 
+            aria-selected="false" 
+            aria-controls="panel-vaccine" 
+            tabindex="-1"
+            class="lab-tab-btn pb-3 text-[#8ea0b4] hover:text-brand-navy transition cursor-pointer"
+          >
+            Vaccination Services
+          </button>
+          <button 
+            type="button" 
+            role="tab" 
+            id="tab-microscopy" 
+            aria-selected="false" 
+            aria-controls="panel-microscopy" 
+            tabindex="-1"
+            class="lab-tab-btn pb-3 text-[#8ea0b4] hover:text-brand-navy transition cursor-pointer"
+          >
+            Advanced Microscopy
+          </button>
+        </div>
+
+        <!-- Active Tab Content Container -->
+        <div id="lab-tab-panels" class="mb-12">
+          
+          <!-- Chemical Research Panel -->
+          <div id="panel-chemical" role="tabpanel" aria-labelledby="tab-chemical" class="lab-tab-panel bg-[#fbfcfd] border border-gray-100 rounded-2xl p-6 sm:p-10 shadow-card grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            
+            <div class="md:col-span-6">
+              <h3 class="text-lg sm:text-xl font-bold text-brand-navy mb-2.5">
+                Expert Diagnostic Laboratory Testing
+              </h3>
+              <p class="text-xs text-[#5d7186] leading-relaxed mb-6">
+                Expert diagnostic laboratory testing provides accurate and reliable results for a wide range of medical conditions.
+              </p>
+
+              <div class="flex flex-col gap-4">
+                
+                <!-- Rapid Results Feature -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-brand-cyan-light flex items-center justify-center text-brand-cyan flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 stroke-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-brand-navy tracking-wider uppercase mb-0.5">RAPID RESULTS</h4>
+                    <p class="text-[11px] text-[#5d7186] leading-relaxed">
+                      We are not just a regular clinic, but a medical service provider, with which you can share any problem.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Qualified Staff Feature -->
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-brand-cyan-light flex items-center justify-center text-brand-cyan flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 stroke-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-brand-navy tracking-wider uppercase mb-0.5">QUALIFIED STUFF</h4>
+                    <p class="text-[11px] text-[#5d7186] leading-relaxed">
+                      In order to obtain operational and accurate results, our Clinic has entered into contractual relationships.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="mt-6">
+                <a href="#lab-tests" class="text-brand-cyan hover:underline font-semibold text-xs flex items-center gap-1 transition">
+                  Read More <span aria-hidden="true">&gt;</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Lab Video Thumbnail -->
+            <div class="md:col-span-6 flex justify-center">
+              <div class="relative w-full rounded-xl overflow-hidden shadow-card group">
+                <img 
+                  src="./assets/images/lab-team.webp" 
+                  alt="Laboratory medical team conducting chemical research with test tubes and microscope" 
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                >
+                <button 
+                  type="button" 
+                  class="absolute inset-0 m-auto w-12 h-12 rounded-full bg-white/90 hover:bg-white text-brand-cyan flex items-center justify-center shadow-lg transition duration-200 transform group-hover:scale-105"
+                  aria-label="Play video about laboratory research"
+                >
+                  <svg class="w-5 h-5 ml-0.5 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Vaccination Services Panel (Hidden by default) -->
+          <div id="panel-vaccine" role="tabpanel" aria-labelledby="tab-vaccine" class="lab-tab-panel hidden bg-[#fbfcfd] border border-gray-100 rounded-2xl p-6 sm:p-10 shadow-card grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-6">
+              <h3 class="text-lg sm:text-xl font-bold text-brand-navy mb-2.5">
+                Comprehensive Immunization & Vaccines
+              </h3>
+              <p class="text-xs text-[#5d7186] leading-relaxed mb-6">
+                Protecting families and travelers with safe, certified, and temperature-controlled international vaccines.
+              </p>
+              <div class="flex flex-col gap-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-brand-cyan-light flex items-center justify-center text-brand-cyan flex-shrink-0 mt-0.5">
+                    <svg class="w-4 h-4 stroke-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                  </div>
+                  <div>
+                    <h4 class="text-xs font-bold text-brand-navy tracking-wider uppercase mb-0.5">CERTIFIED DOSES</h4>
+                    <p class="text-[11px] text-[#5d7186]">All vaccinations adhere to strict WHO and CDC medical distribution protocols.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a href="#lab-tests" class="text-brand-cyan hover:underline font-semibold text-xs flex items-center gap-1 transition">Read More <span aria-hidden="true">&gt;</span></a>
+              </div>
+            </div>
+            <div class="md:col-span-6 flex justify-center">
+              <div class="relative w-full rounded-xl overflow-hidden shadow-card">
+                <img src="./assets/images/lab-team.webp" alt="Vaccine preparation" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Microscopy Panel (Hidden by default) -->
+          <div id="panel-microscopy" role="tabpanel" aria-labelledby="tab-microscopy" class="lab-tab-panel hidden bg-[#fbfcfd] border border-gray-100 rounded-2xl p-6 sm:p-10 shadow-card grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-6">
+              <h3 class="text-lg sm:text-xl font-bold text-brand-navy mb-2.5">
+                High-Resolution Cellular Microscopy
+              </h3>
+              <p class="text-xs text-[#5d7186] leading-relaxed mb-6">
+                Utilizing electron and optical fluorescence microscopes for sub-cellular diagnosis and rapid pathology insights.
+              </p>
+              <div class="mt-6">
+                <a href="#lab-tests" class="text-brand-cyan hover:underline font-semibold text-xs flex items-center gap-1 transition">Read More <span aria-hidden="true">&gt;</span></a>
+              </div>
+            </div>
+            <div class="md:col-span-6 flex justify-center">
+              <div class="relative w-full rounded-xl overflow-hidden shadow-card">
+                <img src="./assets/images/lab-team.webp" alt="Microscopy analysis" class="w-full h-auto object-cover" loading="lazy">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 4-Photo Lab Gallery Row -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          <div class="rounded-xl overflow-hidden shadow-card border border-gray-100 hover:shadow-floating transition duration-200 aspect-[4/3]">
+            <img src="./assets/images/lab-gallery-1.webp" alt="Modern clinic reception desk and check-in lobby" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-card border border-gray-100 hover:shadow-floating transition duration-200 aspect-[4/3]">
+            <img src="./assets/images/lab-gallery-2.webp" alt="Patient undergoing diagnosis inside modern CT/MRI scanner" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-card border border-gray-100 hover:shadow-floating transition duration-200 aspect-[4/3]">
+            <img src="./assets/images/lab-gallery-3.webp" alt="Physicians consulting and examining digital X-ray scan" class="w-full h-full object-cover" loading="lazy">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-card border border-gray-100 hover:shadow-floating transition duration-200 aspect-[4/3]">
+            <img src="./assets/images/lab-gallery-4.webp" alt="Doctor measuring blood pressure on patient arm" class="w-full h-full object-cover" loading="lazy">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <script type="module" src="./src/main.js"></script>
