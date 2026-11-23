@@ -8,7 +8,7 @@
 </head>
 <body class="bg-white text-brand-navy antialiased min-h-screen flex flex-col font-sans">
 
-  <!-- TOP NOTIFICATION BAR -->
+  <!-- 1. TOP NOTIFICATION BAR -->
   <aside class="border-b border-gray-100 bg-[#fbfcfd] text-[#6b7c93] text-[11px] sm:text-xs">
     <div class="max-w-[1024px] mx-auto px-4 py-1.5 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
@@ -34,7 +34,7 @@
     </div>
   </aside>
 
-  <!-- MAIN BRANDING & CONTACT INFO HEADER -->
+  <!-- 2. MAIN BRANDING & CONTACT INFO HEADER -->
   <header class="bg-white border-b border-gray-100">
     <div class="max-w-[1024px] mx-auto px-4 py-3.5 flex flex-col md:flex-row items-center justify-between gap-4">
       
@@ -98,7 +98,7 @@
     </div>
   </header>
 
-  <!-- NAV BAR -->
+  <!-- 3. NAV BAR -->
   <nav class="bg-brand-navy text-white text-xs font-medium sticky top-0 z-40 shadow-sm" aria-label="Main Navigation">
     <div class="max-w-[1024px] mx-auto px-4 flex items-center justify-between h-10 sm:h-11">
       <ul class="flex items-center gap-6 sm:gap-8">
@@ -122,7 +122,7 @@
   <!-- MAIN CONTENT CONTAINER -->
   <main id="main-content" class="flex-grow">
     
-    <!-- HERO SECTION -->
+    <!-- 4. HERO SECTION -->
     <section id="hero" class="relative bg-gradient-to-r from-[#edf4f9] via-[#f1f6fa] to-[#e8f1f8] pt-12 sm:pt-16 pb-24 sm:pb-32 overflow-hidden border-b border-gray-100">
       <div class="max-w-[1024px] mx-auto px-4 flex flex-col md:flex-row items-center justify-between min-h-[420px] relative">
         
@@ -158,7 +158,7 @@
       </div>
     </section>
 
-    <!-- FLOATING QUICK ONLINE CONSULTANCY CARD -->
+    <!-- 5. FLOATING QUICK ONLINE CONSULTANCY CARD -->
     <section class="relative z-20 max-w-[1024px] mx-auto px-4 -mt-16 sm:-mt-20 mb-16">
       <div class="bg-white rounded-lg shadow-floating border border-gray-100 p-6 sm:p-8">
         <form id="quick-consultancy-form" method="POST" action="/consultancy" class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
@@ -251,6 +251,186 @@
         </form>
       </div>
     </section>
+
+    <!-- 6. ABOUT US SECTION -->
+    <section id="about" class="py-12 sm:py-16 bg-white overflow-hidden">
+      <div class="max-w-[1024px] mx-auto px-4 grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Image with Overlapping Open Hours -->
+        <div class="md:col-span-5 relative flex justify-center md:justify-start">
+          <div class="relative w-full max-w-[340px]">
+            <img 
+              src="./assets/images/about-doctor.webp" 
+              alt="Friendly female physician in consultation office" 
+              class="w-full h-auto rounded-xl shadow-card object-cover"
+              loading="lazy"
+            >
+            
+            <!-- Open Hours Blue Badge -->
+            <div class="absolute -bottom-6 -right-2 sm:-right-6 bg-[#2196f3] text-white p-4 sm:p-5 rounded-xl shadow-floating w-[185px] sm:w-[205px]">
+              <h3 class="text-xs sm:text-sm font-bold text-white mb-2.5">Open Hours</h3>
+              <div class="flex flex-col gap-1.5 text-[10px] text-blue-50">
+                <div class="flex justify-between items-center border-b border-white/20 pb-1">
+                  <span>Monday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-white/20 pb-1">
+                  <span>Tuesday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-white/20 pb-1">
+                  <span>Wednesday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-white/20 pb-1">
+                  <span>Thursday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+                <div class="flex justify-between items-center border-b border-white/20 pb-1">
+                  <span>Friday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+                <div class="flex justify-between items-center pt-0.5">
+                  <span>Saturday/Sunday</span>
+                  <span class="font-medium text-white">8:00 - 21:00</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Content -->
+        <div class="md:col-span-7 flex flex-col items-start pt-6 md:pt-0">
+          <span class="text-brand-gold text-xs font-bold tracking-wider uppercase mb-1.5">ABOUT US</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy leading-snug mb-4">
+            Dedicated To Providing<br class="hidden sm:inline"> Complete Medical Care
+          </h2>
+          <p class="text-xs sm:text-sm text-[#5d7186] leading-relaxed mb-3">
+            For us, there are no minor aspects, because a quality result always depends on trifles. Over the years of our activities, we have gained the unique experience of organizing medical services for citizens and foreign nationals.
+          </p>
+          <p class="text-xs sm:text-sm text-[#5d7186] leading-relaxed mb-5">
+            Private patients, international organizations and corporate businesses feel safe and comfortable in establishing relationships.
+          </p>
+          <a href="#about" class="text-brand-cyan hover:underline font-semibold text-xs flex items-center gap-1 transition">
+            Read More <span aria-hidden="true">&gt;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. OUR SPECIALTIES SECTION -->
+    <section id="specialties" class="py-16 sm:py-20 bg-[#fbfcfd] border-t border-gray-100">
+      <div class="max-w-[1024px] mx-auto px-4">
+        
+        <!-- Header -->
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <span class="text-brand-gold text-xs font-bold tracking-wider uppercase mb-1 block">OUR SPECIALTIES</span>
+          <h2 class="text-2xl sm:text-3xl font-bold text-brand-navy mb-2.5">High - Quality Service</h2>
+          <p class="text-xs text-[#5d7186] leading-relaxed">
+            We have introduced the principle of family medicine, which means that the family practitioner will handle the majority of medical requests, with a specialists involved only if necessary.
+          </p>
+        </div>
+
+        <!-- 8 Cards Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+          
+          <!-- 1. Cardiology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h2l1-2 2 4 1-2h2" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Cardiology</h3>
+          </article>
+
+          <!-- 2. Pulmonology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v13m0 0l-4-4m4 4l4-4M6 9a4 4 0 00-4 4v3a4 4 0 004 4h1a3 3 0 003-3v-5a3 3 0 00-4-3zm12 0a4 4 0 014 4v3a4 4 0 01-4 4h-1a3 3 0 01-3-3v-5a3 3 0 014-3z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Pulmonology</h3>
+          </article>
+
+          <!-- 3. Neurology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Neurology</h3>
+          </article>
+
+          <!-- 4. Ophthalmology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Ophthalmology</h3>
+          </article>
+
+          <!-- 5. Gastroenterology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Gastroenterology</h3>
+          </article>
+
+          <!-- 6. Gynecology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="8" r="5" stroke-linecap="round" stroke-linejoin="round" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 13v8m-4-3h8" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Gynecology</h3>
+          </article>
+
+          <!-- 7. Pediatrics -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Pediatrics</h3>
+          </article>
+
+          <!-- 8. Immunology -->
+          <article class="bg-white rounded-xl p-6 flex flex-col items-center text-center shadow-card border border-gray-100/80 hover:-translate-y-1 hover:shadow-floating transition duration-200">
+            <div class="w-14 h-14 rounded-2xl bg-brand-cyan-light flex items-center justify-center text-brand-cyan mb-4">
+              <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-brand-navy">Immunology</h3>
+          </article>
+
+        </div>
+
+        <!-- View More Button -->
+        <div class="text-center mt-10">
+          <a href="#specialties" class="bg-brand-cyan hover:bg-brand-cyan-hover text-white font-semibold text-xs px-7 py-2.5 rounded shadow-sm transition inline-block">
+            View More
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <script type="module" src="./src/main.js"></script>
