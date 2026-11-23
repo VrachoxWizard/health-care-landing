@@ -58,18 +58,96 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Testimonial Pagination Dots
-  const dots = document.querySelectorAll('#testimonials button[aria-label^="Slide"]');
-  dots.forEach((dot, idx) => {
-    dot.addEventListener('click', () => {
-      dots.forEach(d => {
-        d.classList.remove('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
-        d.classList.add('w-2', 'h-2', 'bg-white/40');
+  // 2. Testimonial Carousel Controller
+  const carouselContainer = document.getElementById('testimonials-carousel');
+  const slides = document.querySelectorAll('.testimonial-slide');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  const prevBtn = document.getElementById('testimonials-prev');
+  const nextBtn = document.getElementById('testimonials-next');
+
+  if (carouselContainer && slides.length > 0) {
+    let currentSlide = 0;
+    let autoSlideInterval = null;
+
+    function goToSlide(index) {
+      if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else if (index >= slides.length) {
+        currentSlide = 0;
+      } else {
+        currentSlide = index;
+      }
+
+      // Update slides
+      slides.forEach((slide, idx) => {
+        if (idx === currentSlide) {
+          slide.classList.remove('opacity-0', 'pointer-events-none', 'absolute', 'translate-x-8', '-translate-x-8');
+          slide.classList.add('opacity-100', 'translate-x-0', 'relative');
+        } else {
+          slide.classList.remove('opacity-100', 'translate-x-0', 'relative');
+          slide.classList.add('opacity-0', 'pointer-events-none', 'absolute', idx > currentSlide ? 'translate-x-8' : '-translate-x-8');
+        }
       });
-      dot.classList.remove('w-2', 'h-2', 'bg-white/40');
-      dot.classList.add('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
+
+      // Update dots
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.remove('w-2', 'h-2', 'bg-white/40');
+          dot.classList.add('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
+          dot.setAttribute('aria-selected', 'true');
+        } else {
+          dot.classList.remove('w-2.5', 'h-2.5', 'bg-white', 'shadow-sm');
+          dot.classList.add('w-2', 'h-2', 'bg-white/40');
+          dot.setAttribute('aria-selected', 'false');
+        }
+      });
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      autoSlideInterval = setInterval(() => {
+        goToSlide(currentSlide + 1);
+      }, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        goToSlide(currentSlide - 1);
+        startAutoSlide();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        goToSlide(currentSlide + 1);
+        startAutoSlide();
+      });
+    }
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => {
+        const targetIndex = parseInt(dot.getAttribute('data-slide-to'), 10);
+        if (!isNaN(targetIndex)) {
+          goToSlide(targetIndex);
+          startAutoSlide();
+        }
+      });
     });
-  });
+
+    // Pause auto-sliding on hover
+    carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+    carouselContainer.addEventListener('mouseleave', startAutoSlide);
+
+    // Initial start
+    startAutoSlide();
+  }
 
   // Quick consultancy form submission feedback
   const quickForm = document.getElementById('quick-consultancy-form');
