@@ -9,8 +9,8 @@ def slice_all_assets():
     hero_doc = img.crop((535, 142, 1024, 700))
     hero_doc.save('public/assets/images/hero-doctor.webp')
     
-    # 2. About doctor (female physician)
-    about_doc = img.crop((106, 882, 375, 1222))
+    # 2. About doctor (composite with Open Hours badge)
+    about_doc = img.crop((106, 882, 490, 1235))
     about_doc.save('public/assets/images/about-doctor.webp')
     
     # 3. Child care (baby with teddy bear)
@@ -46,7 +46,7 @@ def slice_all_assets():
     d4.save('public/assets/images/doctor-cooper.webp')
     
     # 8. Footer map
-    fmap = img.crop((520, 5015, 918, 5175))
+    fmap = img.crop((518, 4995, 895, 5145))
     fmap.save('public/assets/images/footer-map.webp')
     
     print("All 13 assets sliced successfully!")
