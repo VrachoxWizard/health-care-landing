@@ -90,4 +90,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3500);
     });
   }
+
+  // Free consultancy CTA form submission feedback
+  const ctaForm = document.getElementById('free-consultancy-cta-form');
+  if (ctaForm) {
+    ctaForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const submitBtn = ctaForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitted ✓';
+      submitBtn.disabled = true;
+      submitBtn.classList.add('bg-emerald-600');
+
+      setTimeout(() => {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('bg-emerald-600');
+        ctaForm.reset();
+      }, 3500);
+    });
+  }
 });
